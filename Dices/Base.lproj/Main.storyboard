@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dices" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="choose dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQV-OR-ZzM">
+                                <rect key="frame" x="254" y="20" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rhd-eS-0VZ">
+                                <rect key="frame" x="20" y="58" width="560" height="29"/>
+                                <segments>
+                                    <segment title="d10"/>
+                                    <segment title="d100"/>
+                                    <segment title="Sum of d10"/>
+                                </segments>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="Prp-y4-rq3">
+                                <rect key="frame" x="18" y="143" width="564" height="31"/>
+                                <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Rx-Yz-Acp"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLH-EW-40a">
+                                <rect key="frame" x="20" y="121" width="35" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="65i-eM-WSJ"/>
+                                    <constraint firstAttribute="width" constant="35" id="mz6-CK-iOH">
+                                        <variation key="widthClass=compact" constant="360"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzq-K9-YVB">
+                                <rect key="frame" x="222" y="406" width="156" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CdH-u9-9an"/>
+                                    <constraint firstAttribute="width" constant="156" id="Z2k-gT-ubB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Roll Dice"/>
+                                <connections>
+                                    <action selector="rollDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tBo-ll-rco"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="set number of dices" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q1t-hb-Oqw">
+                                <rect key="frame" x="416" y="225" width="164" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="yYd-6E-qsO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ql-B3-Hjk">
+                                <rect key="frame" x="234" y="320" width="133" height="30"/>
+                                <state key="normal" title="Clear Modifications"/>
+                                <connections>
+                                    <action selector="clearMods:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k7i-Oh-0AP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6j-Iw-GQt">
+                                <rect key="frame" x="276" y="495" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your own modificator" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NOh-nw-V92">
+                                <rect key="frame" x="20" y="225" width="164" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="6v3-Nq-RYv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V6j-Iw-GQt" secondAttribute="bottom" constant="84" id="0sf-V1-gvQ"/>
+                            <constraint firstItem="NOh-nw-V92" firstAttribute="baseline" secondItem="Q1t-hb-Oqw" secondAttribute="baseline" id="1uc-8o-PBS"/>
+                            <constraint firstItem="Prp-y4-rq3" firstAttribute="leading" secondItem="NOh-nw-V92" secondAttribute="leading" id="21b-Gl-6r1"/>
+                            <constraint firstItem="Prp-y4-rq3" firstAttribute="centerX" secondItem="9ql-B3-Hjk" secondAttribute="centerX" id="31A-6S-mRM"/>
+                            <constraint firstItem="gLH-EW-40a" firstAttribute="leading" secondItem="Prp-y4-rq3" secondAttribute="leading" id="BFz-lW-cwv"/>
+                            <constraint firstItem="NOh-nw-V92" firstAttribute="top" secondItem="Prp-y4-rq3" secondAttribute="bottom" constant="52" id="CEk-07-dRq"/>
+                            <constraint firstItem="Prp-y4-rq3" firstAttribute="top" secondItem="gLH-EW-40a" secondAttribute="bottom" constant="1" id="GsN-35-hpO"/>
+                            <constraint firstItem="Prp-y4-rq3" firstAttribute="trailing" secondItem="Q1t-hb-Oqw" secondAttribute="trailing" id="HMz-vS-f2L"/>
+                            <constraint firstItem="rhd-eS-0VZ" firstAttribute="trailing" secondItem="Prp-y4-rq3" secondAttribute="trailing" id="PUR-58-ZuX"/>
+                            <constraint firstItem="9ql-B3-Hjk" firstAttribute="centerX" secondItem="Nzq-K9-YVB" secondAttribute="centerX" id="VkQ-Sn-Qyp"/>
+                            <constraint firstItem="V6j-Iw-GQt" firstAttribute="top" secondItem="Nzq-K9-YVB" secondAttribute="bottom" constant="59" id="YQq-nL-hkN"/>
+                            <constraint firstItem="Nzq-K9-YVB" firstAttribute="centerX" secondItem="V6j-Iw-GQt" secondAttribute="centerX" id="ZXb-rw-5Rb"/>
+                            <constraint firstItem="rhd-eS-0VZ" firstAttribute="leading" secondItem="gLH-EW-40a" secondAttribute="leading" id="fZs-ab-HhY"/>
+                            <constraint firstItem="gLH-EW-40a" firstAttribute="top" secondItem="rhd-eS-0VZ" secondAttribute="bottom" constant="35" id="jJO-FB-cfx"/>
+                            <constraint firstItem="OQV-OR-ZzM" firstAttribute="centerX" secondItem="rhd-eS-0VZ" secondAttribute="centerX" id="lUb-xk-x2w"/>
+                            <constraint firstItem="Nzq-K9-YVB" firstAttribute="top" secondItem="9ql-B3-Hjk" secondAttribute="bottom" constant="56" id="mlv-VX-qh7"/>
+                            <constraint firstItem="rhd-eS-0VZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nHL-Ge-3ct"/>
+                            <constraint firstItem="rhd-eS-0VZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ry4-YM-mQL"/>
+                            <constraint firstItem="OQV-OR-ZzM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sfM-re-uNR"/>
+                            <constraint firstItem="rhd-eS-0VZ" firstAttribute="top" secondItem="OQV-OR-ZzM" secondAttribute="bottom" constant="17" id="viX-qD-kWC"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NOD-09-fbs" appends="YES" id="lyE-uN-Vq5"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="gLH-EW-40a" id="QiO-2y-wvG"/>
+                        <outlet property="mainResult" destination="V6j-Iw-GQt" id="eqD-sn-b45"/>
+                        <outlet property="myMod" destination="NOh-nw-V92" id="by6-3a-H5d"/>
+                        <outlet property="numberOfDices" destination="Q1t-hb-Oqw" id="LRN-0M-Tks"/>
+                        <outlet property="sliderLevel" destination="Prp-y4-rq3" id="PbI-K9-4XS"/>
+                        <outlet property="typeOfDice" destination="rhd-eS-0VZ" id="jzH-3a-vDO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NOD-09-fbs"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="337"/>
+        </scene>
+    </scenes>
+</document>
